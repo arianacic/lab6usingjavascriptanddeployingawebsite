@@ -42,8 +42,6 @@ function recalculate() {
 }
 
 
-
-
 /****************** model button logic ******************/
 
 /* 
@@ -58,10 +56,23 @@ function recalculate() {
 
 // INSERT YOUR CODE HERE
 
+let modelButton = document.getElementById("model-button");
 
+function changeModel() {
+    let modelText = document.getElementById("model-text");
 
+    if (modelName === "XYZ") {
+        modelName = "CPRG";
+        modelText.innerHTML = "Model CPRG";
+    } else {
+        modelName = "XYZ";
+        modelText.innerHTML = "Model XYZ";
+    }
 
+    recalculate();
+}
 
+modelButton.addEventListener("click", changeModel);
 
 
 /****************** duration button logic ******************/
