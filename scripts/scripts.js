@@ -11,7 +11,7 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
-let modelName = "test";
+let modelName = "XYZ";
 let duration = 1;
 
 
@@ -88,5 +88,19 @@ modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
 
+let durationButton = document.getElementById("duration-button");
+
+function changeDuration() {
+    let durationText = document.getElementById("duration-text");
+
+    let newDuration = prompt("Enter new duration:");
+    duration = Number(newDuration);
+
+    durationText.innerHTML = duration;
+
+    recalculate();
+}
+
+durationButton.addEventListener("click", changeDuration);
 
 
